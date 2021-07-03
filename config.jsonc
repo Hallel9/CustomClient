@@ -1,0 +1,7 @@
+{
+  "prefix": "?",
+  "token": "token here",
+  "owners": ["IDS here"],
+  "defaultPerms": ["SEND_MESSAGES"], // ["ADD_REACTIONS", "MANAGE_MESSAGES"]
+  "mongo": "MongoURI here"
+}
