@@ -22,7 +22,7 @@ module.exports = class extends Command {
 
     if (!embed || embed.error) {
       return message.channel.send(
-        `*${query}* couldn't be found within the discord.js documentation. (<https://discord.js.org/>).`
+        `${query} Couldn't be found within the discord.js documentation. (<https://discord.js.org/>).`
       );
     }
     if (!message.guild) {
@@ -37,7 +37,7 @@ module.exports = class extends Command {
     try {
       react = await msg.awaitReactions(
         (reaction, user) =>
-          reation.emoji.name === "🗑️" && user.id === message.author.id,
+          reaction.emoji.name === "🗑️" && user.id === message.author.id,
         { max: 1, time: 10000, errors: ["time"] }
       );
     } catch (err) {
@@ -45,7 +45,7 @@ module.exports = class extends Command {
     }
 
     if (react && react.first()) {
-      message.delete();
+      msg.delete();
     }
     return message;
   }
