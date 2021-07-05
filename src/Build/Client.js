@@ -3,7 +3,7 @@ const { Client, Collection, Permissions } = require("discord.js");
 const Util = require("./Util");
 const mongoose = require("mongoose");
 
-module.exports = class HantoniClient extends Client {
+module.exports = class CustomClient extends Client {
   constructor(options = {}) {
     super({
       disableMentions: "everyone",

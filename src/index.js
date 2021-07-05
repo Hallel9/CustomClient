@@ -1,6 +1,6 @@
-const HantoniiClient = require("./Build/Client");
+const Client = require("./Build/Client");
 const config = require("../config.json");
 
-const client = new HantoniiClient(config);
+const client = new Client(config);
 client.start();
 client.connect();
