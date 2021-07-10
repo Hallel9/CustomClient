@@ -40,6 +40,7 @@ module.exports = class extends Command {
         `**> Description:** ${cmd.description}`,
         `**> Category:** ${cmd.category}`,
         `**> Usage:** ${cmd.usage}`,
+				`**>  Examples:** ${cmd.examples.length ? cmd.examples.map((ex) => `\`${ex}\``).join(", ") : "No Examples"}`
       ]);
       return message.channel.send(embed);
     } else {
