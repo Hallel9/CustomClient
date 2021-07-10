@@ -18,6 +18,7 @@ class Command {
     this.ownerOnly = options.ownerOnly || false;
     this.nsfw = options.nsfw || false;
     this.args = options.args || false;
+    this.examples = options.examples || [];
   }
   async run(message, args) {
     throw new Error(`Command ${this.name} doesn't have a run method.`);
